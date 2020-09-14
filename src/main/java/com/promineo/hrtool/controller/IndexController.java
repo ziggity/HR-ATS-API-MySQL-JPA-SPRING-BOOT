@@ -11,6 +11,8 @@ public class IndexController {
 
     @GetMapping
     public String sayHello() {
-        return "Hello and welcome! Use http://localhost:8080/api/candidates to see all candidates";
+        return "Hello and welcome! Use http://localhost:8080/api/candidates to see all candidates \n"
+        		+ "Use http://localhost:8080/api/recruiters to see all recruiters \n "
+        		+ "Use http://localhost:8080/api/jobs to see all jobs";
     }
 }

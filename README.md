@@ -11,12 +11,12 @@ Entity: Tags, Candidates, Users, Admins, Jobs  (any other ones let me know I'll 
 Tags have one to one relationship (candidate to a job)
 candidates have one to many relationships to Jobs
 Users can own many candidates so many to many
-Admins same as Users but higher priveldges
+*Stretch goal* add Admins same as Users but higher privileges
 Jobs have one to many candidates and Admins as well
 - User can register and login
-- Admin can create job listing
-- Admin can delete a job
-- Admin can update a job
+- User can create job listing
+- User can delete a job
+- User can update a job
 -*stretch goal* can post job to Indeed website with API call
 -User can input a candidate into the system (general applicant pool)
 -User can tag a candidate to a job (candidates are one to many relationship to jobs)
