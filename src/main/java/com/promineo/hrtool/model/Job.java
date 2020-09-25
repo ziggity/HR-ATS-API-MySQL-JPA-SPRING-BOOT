@@ -28,7 +28,7 @@ public class Job implements Serializable {
     private String content;
     
     @NotBlank
-    private int pay;
+    private String pay;
     
     
 
@@ -65,7 +65,12 @@ public class Job implements Serializable {
 	public void setContent(String content) {
 		this.content = content;
 	}
-
+	public String getPay() {
+		return pay;
+	}
+	public void setPay(String pay) {
+		 this.pay = pay;
+	}
 	public Date getCreatedAt() {
 		return createdAt;
 	}
@@ -82,10 +87,5 @@ public class Job implements Serializable {
 		this.updatedAt = updatedAt;
 	}
 	
-	public int getPay() {
-		return pay;
-	}
-	public int setPay() {
-		return this.pay = pay;
-	}
+	
 }

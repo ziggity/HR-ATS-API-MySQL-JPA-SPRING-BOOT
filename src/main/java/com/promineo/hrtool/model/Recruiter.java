@@ -30,8 +30,18 @@ public class Recruiter {
     private String title;
 
     @NotBlank
-    private int level; // level 3 HR coordinator | level 4 sourcer | level 5 recruiter | level 6 manager | level 7 sr manager | level 8 director | level 10 VP | level 11 CEO
+    private String level; // level 3 HR coordinator | level 4 sourcer | level 5 recruiter | level 6 manager | level 7 sr manager | level 8 director | level 10 VP | level 11 CEO
 	
+    @NotBlank
+    private String salary;
+    
+    public String getSalary() {
+    	return salary;
+    }
+    public void setSalary(String salary) {
+    	this.salary = salary;
+    }
+    
 	public Long getId() {
 		return id;
 	}
@@ -64,13 +74,14 @@ public class Recruiter {
 		this.lastName = lastName;
 	}
 
-	public int getLevel() {
+	public String getLevel() {
 		return level;
 	}
 
-	public void setLevel(int level) {
+	public void setLevel(String level) {
 		this.level = level;
 	}
+
 
 	
 }

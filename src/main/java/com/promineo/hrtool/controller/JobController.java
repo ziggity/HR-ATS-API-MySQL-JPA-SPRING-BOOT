@@ -17,40 +17,41 @@ public class JobController {
     @Autowired
     JobRepository jobRepository;
 
-    // Get All Job
+    // Get All jobs
     @GetMapping("/jobs")
-    public List<JobRepository> getAllJobs() {
+    public List<Job> getAllJobs() {
         return jobRepository.findAll();
     }
-    // Create a new Job
+    // Create a new job
     @PostMapping("/jobs")
     public Job createJob(@Valid @RequestBody Job job) {
         return jobRepository.save(job);
     }
-    // Get a Single Job
+    // Get a Single job
     @GetMapping("/jobs/{id}")
-    public JobRepository getJobById(@PathVariable(value = "id") Long jobId) {
+    public Job getJobById(@PathVariable(value = "id") Long jobId) {
         return jobRepository.findById(jobId)
-                .orElseThrow(() -> new ResourceNotFoundException("Job", "id", jobId));
+                .orElseThrow(() -> new ResourceNotFoundException("job", "id", jobId));
     }
-    // Update a Job
+    // Update a job
     @PutMapping("/jobs/{id}")
-    public JobRepository updateJob(@PathVariable(value = "id") Long jobId,
+    public Job updateJob(@PathVariable(value = "id") Long jobId,
                                             @Valid @RequestBody Job jobDetails) {
 
-        JobRepository job = jobRepository.findById(jobId)
-                .orElseThrow(() -> new ResourceNotFoundException("Job", "id", jobId));
+        Job job = jobRepository.findById(jobId)
+                .orElseThrow(() -> new ResourceNotFoundException("job", "id", jobId));
 
         job.setTitle(jobDetails.getTitle());
         job.setContent(jobDetails.getContent());
+        job.setPay(jobDetails.getPay());
 
-        JobRepository updatedJob = jobRepository.save(job);
+        Job updatedJob = jobRepository.save(job);
         return updatedJob;
     }
-    // Delete a Job
+    // Delete a job
     @DeleteMapping("/jobs/{id}")
     public ResponseEntity<?> deleteJob(@PathVariable(value = "id") Long jobId) {
-        JobRepository job = jobRepository.findById(jobId)
+        Job job = jobRepository.findById(jobId)
                 .orElseThrow(() -> new ResourceNotFoundException("Job", "id", jobId));
 
         jobRepository.delete(job);
