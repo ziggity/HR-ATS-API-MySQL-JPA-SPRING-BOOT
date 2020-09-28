@@ -41,7 +41,8 @@ public class Job implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     @LastModifiedDate
     private Date updatedAt;
-
+    
+   
 	public Long getId() {
 		return id;
 	}
@@ -49,7 +50,8 @@ public class Job implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
+	 
+	 @OneToMany(mappedBy = "candidate")
 	public String getTitle() {
 		return title;
 	}

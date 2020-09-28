@@ -1,4 +1,4 @@
-package com.promineo.hrtool.repository;
+package com.promineo.service;
 
 import com.promineo.hrtool.model.Candidate;
 
@@ -16,9 +16,8 @@ import org.springframework.stereotype.Service;
 import com.promineo.hrtool.model.Candidate;
 import com.promineo.hrtool.repository.CandidateRepository;
 
-@Repository
-public interface CandidateRepository extends JpaRepository<Candidate, Long> {
- 
+@Service
+public interface CandidateService {
+	 static final Logger Logger = LogManager.getLogger(CandidateService.class);
+
 }
-
-
