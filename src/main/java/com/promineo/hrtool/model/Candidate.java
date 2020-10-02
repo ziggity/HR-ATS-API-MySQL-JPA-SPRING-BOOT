@@ -60,8 +60,8 @@ public class Candidate implements Serializable {
 	public String getContent() {
 		return content;
 	}
-	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+	//@OneToOne(cascade = CascadeType.ALL)
+	//@JoinColumn(name = "id")
 	public String getAddress() {
 		return address;
 	}

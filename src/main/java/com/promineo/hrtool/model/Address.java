@@ -62,7 +62,7 @@ public class Address {
 			return zip;
 		}
 		
-		@OneToOne(mappedBy = "address")
+		//@OneToOne(mappedBy = "address")
 		public Candidate getCandidate() {
 			return candidate;
 		}
@@ -70,3 +70,4 @@ public class Address {
 			this.candidate = candidate;
 
 		}
+}

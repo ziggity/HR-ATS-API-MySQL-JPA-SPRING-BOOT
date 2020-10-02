@@ -37,13 +37,13 @@ public class JobFamily implements Serializable{
     @NotBlank
     private String content;
     
-    private Set<Candidate> candidates;
+    //private Set<Candidate> candidates;
     
     @NotBlank
     private String jobFamily;
     
-    @OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "id")
+   // @OneToOne(cascade = CascadeType.ALL)
+	//@JoinColumn(name = "id")
     public String getJobFamily() {
 		return jobFamily;
 	}
@@ -52,9 +52,9 @@ public class JobFamily implements Serializable{
 		this.jobFamily = jobFamily;
 	}
 
-	public void setCandidates(Set<Candidate> candidates) {
-		this.candidates = candidates;
-	}
+//	public void setCandidates(Set<Candidate> candidates) {
+//		this.candidates = candidates;
+//	}
 
 	@Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
@@ -74,16 +74,16 @@ public class JobFamily implements Serializable{
 		this.id = id;
 	}
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
+   // @OneToOne(cascade = CascadeType.ALL)
+  //  @JoinColumn(name = "id")
 	public String getTitle() {
 		return title;
 	}
 	
-	@OneToMany(mappedBy = "candidate")
-	public Set<Candidate> getCandidates(){
-		return candidates;
-	}
+	//@OneToMany(mappedBy = "candidate")
+//	public Set<Candidate> getCandidates(){
+//		return candidates;
+//	}
 	public void setTitle(String title) {
 		this.title = title;
 	}

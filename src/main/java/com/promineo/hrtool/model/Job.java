@@ -51,7 +51,7 @@ public class Job implements Serializable {
 		this.id = id;
 	}
 	 
-	 @OneToMany(mappedBy = "candidate")
+	// @OneToMany(mappedBy = "candidate")
 	public String getTitle() {
 		return title;
 	}

@@ -1,5 +1,22 @@
 # HR-ATS-API-MySQL-JPA-SPRING-BOOT
 ## Final project for Promineo tech 
+## How to use project:
+-Navigate yourself to the working directory, and type "mvn spring-boot:run" in the cmd prompt / Terminal window. 
+open another cmd prompt/ terminal and use Curl to the local address: http://localhost:8080/api/recruiters, or use Postman (much better option)
+-Make a Post request to that URL with this payload in JSON format, raw body:
+{"firstName" : "Sri", "lastName": "S", "title": "Recruiter", "level": "5", "salary": "185,000"}
+
+-To Create a recruiter use this URL: make a Post request in Postman: http://localhost:8080/api/recruiters
+and here's the payload JSON format raw: {"firstName" : "Tamm", "lastName": "Lee", "title": "Manager", "level": "6", "salary": "285,000"}
+
+-To Read all the recruiters use this URL: create a GET request in Postman and send this: http://localhost:8080/api/recruiters
+
+-To update a recruiter, create a Put request and use this URL: http://localhost:8080/api/recruiters/3 with this payload:
+{"firstName" : "Sri", "lastName": "S", "title": "Recruiter", "level": "4", "salary": "85,000"}
+
+-To Delete the recruiter you wish to, create a Delete request in postman with the ID of the recruiter at the end: http://localhost:8080/api/recruiters/2
+
+
 
 ### Basic outline of the schema: 
 

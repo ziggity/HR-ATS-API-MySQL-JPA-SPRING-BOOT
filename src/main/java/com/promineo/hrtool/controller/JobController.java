@@ -21,6 +21,7 @@ public class JobController {
     @GetMapping("/jobs")
     public List<Job> getAllJobs() {
         return jobRepository.findAll();
+
     }
     // Create a new job
     @PostMapping("/jobs")
